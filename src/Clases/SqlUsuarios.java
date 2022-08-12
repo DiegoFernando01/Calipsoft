@@ -1,4 +1,5 @@
 package Clases;
+
 /*
 Calipsoft - Proyecto final bases de datos - Abril / Agosto de 2022
 Hecho por: 
@@ -6,7 +7,7 @@ Jhon Alexander Valencia Hilamo - 202042426
 Cristian Camilo Montaño Renteria - 202024223
 Alejandro Zamorano - 201941088
 Diego Fernando Victoria López - 202125877
-*/
+ */
 
 //Inicio importación de clases necesarias
 import Ventanas.Menu;
@@ -73,10 +74,10 @@ public class SqlUsuarios { //Inicio clase SqlUsuarios
             ModeloTablaUsuarios.removeRow(0);
         }
         if (Dato.equals("")) {
-            ConsultaSql = "SELECT Codigo, Primer_Nombre, Segundo_Nombre, Primer_Apellido, Segundo_Apellido, Id_Sexo, Correo, Teléfono, Id_Tipo_Perfil, Id_Área, Contraseña, Id_Cargo, Id_Estado "
-                    + "FROM usuarios ORDER BY Codigo";
+            ConsultaSql = "SELECT * FROM usuarios u INNER JOIN tipo_perfiles tp ON u.Id_Tipo_Perfil = tp.Códigoperfil INNER JOIN areas a ON u.Id_Área = a.Codigo_area INNER JOIN sexos s ON u.Id_Sexo = s.código_sexo INNER JOIN cargos c ON u.Id_Cargo = c.Código_cargo INNER JOIN estados e ON u.Id_Estado = e.código_estado";
         } else {
-            ConsultaSql = "SELECT * FROM usuarios WHERE (Codigo LIKE'" + Dato + "%' OR Primer_Nombre LIKE'" + Dato + "%' OR Primer_Apellido LIKE'" + Dato + "%' OR Id_Cargo LIKE'" + Dato + "%') ORDER BY Codigo";
+            ConsultaSql = "SELECT * FROM usuarios u INNER JOIN tipo_perfiles tp ON u.Id_Tipo_Perfil = tp.Códigoperfil INNER JOIN areas a ON u.Id_Área = a.Codigo_area INNER JOIN sexos s ON u.Id_Sexo = s.código_sexo INNER JOIN cargos c ON u.Id_Cargo = c.Código_cargo INNER JOIN estados e ON u.Id_Estado = e.código_estado "
+                    + "WHERE (Codigo LIKE'" + Dato + "%' OR Primer_Nombre LIKE'" + Dato + "%' OR Primer_Apellido LIKE'" + Dato + "%' OR Id_Cargo LIKE'" + Dato + "%') ORDER BY Codigo";
         }
         String DatosBD[] = new String[13];
         try { //Inicio capturador de errores
@@ -88,14 +89,14 @@ public class SqlUsuarios { //Inicio clase SqlUsuarios
                 DatosBD[2] = ResultadosConsulta.getString("Segundo_Nombre");
                 DatosBD[3] = ResultadosConsulta.getString("Primer_Apellido");
                 DatosBD[4] = ResultadosConsulta.getString("Segundo_Apellido");
-                DatosBD[5] = ResultadosConsulta.getString("Id_Sexo");
+                DatosBD[5] = ResultadosConsulta.getString("sexo");
                 DatosBD[6] = ResultadosConsulta.getString("Correo");
                 DatosBD[7] = ResultadosConsulta.getString("Teléfono");
-                DatosBD[8] = ResultadosConsulta.getString("Id_Tipo_Perfil");
-                DatosBD[9] = ResultadosConsulta.getString("Id_Área");
+                DatosBD[8] = ResultadosConsulta.getString("perfil");
+                DatosBD[9] = ResultadosConsulta.getString("Area");
                 DatosBD[10] = ResultadosConsulta.getString("Contraseña");
-                DatosBD[11] = ResultadosConsulta.getString("Id_Cargo");
-                DatosBD[12] = ResultadosConsulta.getString("Id_Estado");
+                DatosBD[11] = ResultadosConsulta.getString("Cargo");
+                DatosBD[12] = ResultadosConsulta.getString("estado");
                 ModeloTablaUsuarios.addRow(DatosBD);
             }
         } catch (SQLException ErrorListarUsuarios) { //Capturador del error

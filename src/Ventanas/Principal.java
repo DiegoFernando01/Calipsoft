@@ -501,8 +501,8 @@ public class Principal extends javax.swing.JFrame { //Inicio clase Principal
             Propiedades.setProperty("mail.smtp.port", "587");
             Propiedades.setProperty("mail.smtp.auth", "true");
             Session Ingreso = Session.getDefaultInstance(Propiedades);
-            String CorreoSalida = ""; //CalipsoftApp@gmail.com
-            String PassSalida = ""; //Calipsoft2019
+            String CorreoSalida = ""; //Correo desde el que se enviará el mensaje
+            String PassSalida = ""; //Contraseña del correo desde el que se enviará el mensaje
             SqlUsuarios.TomarCorreo(Integer.parseInt(Jt_Codigo.getText()));
             String CorreoLlegada = SqlUsuarios.CorreoBD;
             String AsuntoCorreo = "Solicitud de contraseña - Código de usuario: " + Jt_Codigo.getText();
@@ -518,9 +518,9 @@ public class Principal extends javax.swing.JFrame { //Inicio clase Principal
             t.close();
             JOptionPane.showMessageDialog(null, "Correo electrónico con contraseña enviado", "CALIPSOFT", JOptionPane.PLAIN_MESSAGE, ObjetoConRegistro.IconoVerificacion);
         } catch (AddressException ex) {
-            System.err.println("Se ha producido un error en el envío del mensaje");
+            System.err.println("Se ha producido un error en el envío del mensaje\n" + ex);
         } catch (MessagingException ex) {
-            System.err.println("Se ha producido un error en el envío del mensaje");
+            System.err.println("Se ha producido un error en el envío del mensaje\n" + ex);
         }
         //Fin click sobre botón ¿Olvidó su contraseña?
     }//GEN-LAST:event_Jb_PasswordOlvidadaActionPerformed

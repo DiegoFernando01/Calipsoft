@@ -760,6 +760,11 @@ public class Menu extends javax.swing.JFrame { //Inicio clase Menú
         Jl_BuscarReporte.setForeground(new java.awt.Color(51, 51, 51));
         Jl_BuscarReporte.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Jl_BuscarReporte.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/IconoBusqueda.png"))); // NOI18N
+        Jl_BuscarReporte.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                Jl_BuscarReporteMouseClicked(evt);
+            }
+        });
 
         JTable_Reportes.setBackground(new java.awt.Color(255, 255, 255));
         JTable_Reportes.setFont(new java.awt.Font("Comfortaa", 0, 12)); // NOI18N
@@ -898,6 +903,11 @@ public class Menu extends javax.swing.JFrame { //Inicio clase Menú
         Jl_BuscarEquipos.setForeground(new java.awt.Color(51, 51, 51));
         Jl_BuscarEquipos.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Jl_BuscarEquipos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/IconoBusqueda.png"))); // NOI18N
+        Jl_BuscarEquipos.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                Jl_BuscarEquiposMouseClicked(evt);
+            }
+        });
 
         Jt_BuscarEquipo.setBackground(new java.awt.Color(255, 255, 255));
         Jt_BuscarEquipo.setFont(new java.awt.Font("Comfortaa", 0, 12)); // NOI18N
@@ -1566,6 +1576,17 @@ public class Menu extends javax.swing.JFrame { //Inicio clase Menú
 
         //Fin letra ingresada en campo de texto Buscar Reserva
     }//GEN-LAST:event_Jt_BuscarReservaKeyTyped
+
+    private void Jl_BuscarReporteMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Jl_BuscarReporteMouseClicked
+        
+    }//GEN-LAST:event_Jl_BuscarReporteMouseClicked
+
+    private void Jl_BuscarEquiposMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Jl_BuscarEquiposMouseClicked
+        //Inicio click en imagen inventario equipos
+        InventarioEquipos ObjetoInventario = new InventarioEquipos();
+        ObjetoInventario.setVisible(true);
+        //Fin click en imagen inventario equipos
+    }//GEN-LAST:event_Jl_BuscarEquiposMouseClicked
 
     public static void main(String args[]) { //Inicio lanzador clase Menú
         java.awt.EventQueue.invokeLater(() -> {

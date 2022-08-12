@@ -1251,6 +1251,9 @@
                       <Image iconType="3" name="/Imagenes/IconoBusqueda.png"/>
                     </Property>
                   </Properties>
+                  <Events>
+                    <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="Jl_BuscarReporteMouseClicked"/>
+                  </Events>
                 </Component>
                 <Container class="javax.swing.JScrollPane" name="JScroll_TablaReportes">
                   <AuxValues>
@@ -1517,6 +1520,9 @@
                       <Image iconType="3" name="/Imagenes/IconoBusqueda.png"/>
                     </Property>
                   </Properties>
+                  <Events>
+                    <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="Jl_BuscarEquiposMouseClicked"/>
+                  </Events>
                 </Component>
                 <Component class="javax.swing.JTextField" name="Jt_BuscarEquipo">
                   <Properties>

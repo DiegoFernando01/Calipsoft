@@ -68,9 +68,9 @@ public class SqlEquipo { //Inicio clase SqlEquipos
             ModeloTablaEquipos.removeRow(0);
         }
         if (Dato.equals("")) {
-            ConsultaSql = "SELECT * FROM equipo ORDER BY serial";
+            ConsultaSql = "SELECT * FROM equipo e INNER JOIN tipo_equipo te ON e.id_tipo_equipo = te.código INNER JOIN ubicación u ON e.id_ubicación = u.código INNER JOIN marca m ON e.id_marca = m.código INNER JOIN estado_del_equipo ee ON e.id_estados_equipos = ee.código";
         } else {
-            ConsultaSql = "SELECT * FROM equipo WHERE (serial LIKE'" + Dato + "%' OR modelo LIKE'" + Dato + "%') AND serial!=1 ORDER BY serial";
+            ConsultaSql = "SELECT * FROM equipo e INNER JOIN tipo_equipo te ON e.id_tipo_equipo = te.código INNER JOIN ubicación u ON e.id_ubicación = u.código INNER JOIN marca m ON e.id_marca = m.código INNER JOIN estado_del_equipo ee ON e.id_estados_equipos = ee.código WHERE (serial LIKE'" + Dato + "%' OR modelo LIKE'" + Dato + "%') AND serial!=1 ORDER BY serial";
         }
         String DatosBD[] = new String[7];
         try { //Inicio capturador de errores
@@ -78,12 +78,12 @@ public class SqlEquipo { //Inicio clase SqlEquipos
             ResultSet ResultadosConsulta = ConsultaBD.executeQuery(ConsultaSql);
             while (ResultadosConsulta.next()) {
                 DatosBD[0] = ResultadosConsulta.getString("serial");
-                DatosBD[1] = ResultadosConsulta.getString("id_tipo equipo");
-                DatosBD[2] = ResultadosConsulta.getString("id_ubicación");
-                DatosBD[3] = ResultadosConsulta.getString("id_marca");
+                DatosBD[1] = ResultadosConsulta.getString("tipo de equipo");
+                DatosBD[2] = ResultadosConsulta.getString("ubicación del equipo");
+                DatosBD[3] = ResultadosConsulta.getString("marca");
                 DatosBD[4] = ResultadosConsulta.getString("modelo");
                 DatosBD[5] = ResultadosConsulta.getString("observaciones");
-                DatosBD[6] = ResultadosConsulta.getString("id_estados equipos");
+                DatosBD[6] = ResultadosConsulta.getString("estado");
                 ModeloTablaEquipos.addRow(DatosBD);
             }
         } catch (SQLException ErrorListarEquipos) { //Capturador del error
@@ -93,7 +93,7 @@ public class SqlEquipo { //Inicio clase SqlEquipos
 
     public static int InsertarEquipo() { //Inicio método Insertar Equipos
         int ResultadosConsulta = 0;
-        String sql = "INSERT INTO `equipo`(`serial`, `id_tipo equipo`, `id_ubicación`, `id_marca`, `modelo`, `observaciones`, `id_estados equipos`) VALUES (?,?,?,?,?,?,?)";
+        String sql = "INSERT INTO `equipo`(`serial`, `id_tipo_equipo`, `id_ubicación`, `id_marca`, `modelo`, `observaciones`, `id_estados_equipos`) VALUES (?,?,?,?,?,?,?)";
         try { //Inicio capturador de errores
             ConsultaPreparada = ConexionBD.prepareStatement(sql);
             ConsultaPreparada.setInt(1, Integer.parseInt(RegistroEquipos.Jt_Serial.getText()));
@@ -118,12 +118,12 @@ public class SqlEquipo { //Inicio clase SqlEquipos
             ResultSet rs = ConsultaPreparada.executeQuery();
             while (rs.next()) {
                 RegistroEquipos.Jt_Serial.setText(rs.getString("serial"));
-                RegistroEquipos.JCombo_TipoEquipo.setSelectedIndex(Integer.parseInt(rs.getString("id_tipo equipo")));
+                RegistroEquipos.JCombo_TipoEquipo.setSelectedIndex(Integer.parseInt(rs.getString("id_tipo_equipo")));
                 RegistroEquipos.JCombo_Ubicacion.setSelectedIndex(Integer.parseInt(rs.getString("id_ubicación")));
                 RegistroEquipos.JCombo_Marca.setSelectedIndex(Integer.parseInt(rs.getString("id_marca")));
                 RegistroEquipos.Jt_Modelo.setText(rs.getString("modelo"));
                 RegistroEquipos.Jta_Observaciones.setText(rs.getString("observaciones"));
-                RegistroEquipos.JCombo_Estado.setSelectedIndex(Integer.parseInt(rs.getString("id_estados equipos")));
+                RegistroEquipos.JCombo_Estado.setSelectedIndex(Integer.parseInt(rs.getString("id_estados_equipos")));
             }
         } catch (SQLException ex) { //Inicio capturador del error producido
             System.err.println("Se ha producido un error - Método Buscar Equipo\nMensaje del error: " + ex);
@@ -132,7 +132,7 @@ public class SqlEquipo { //Inicio clase SqlEquipos
 
     public static int ModificarEquipo() { //Inicio método Modificar Equipos
         int ResultadosConsulta = 0;
-        ConsultaSql = "UPDATE `equipo` SET `serial`=? ,`id_tipo equipo`=?,`id_ubicación`=?,`id_marca`=?,`modelo`=200?,`observaciones`=?,`id_estados equipos`=? WHERE serial =?";
+        ConsultaSql = "UPDATE `equipo` SET `serial`=? ,`id_tipo_equipo`=?,`id_ubicación`=?,`id_marca`=?,`modelo`=200?,`observaciones`=?,`id_estados_equipos`=? WHERE serial =?";
         try { //Inicio capturador de errores
             ConsultaPreparada = ConexionBD.prepareStatement(ConsultaSql);
             ConsultaPreparada.setInt(1, Integer.parseInt(RegistroEquipos.Jt_Serial.getText()));
@@ -157,12 +157,12 @@ public class SqlEquipo { //Inicio clase SqlEquipos
         }
         if (TipoEquipo == 0) {
             if (Dato.equals("")) {
-                ConsultaSql = "SELECT * FROM equipo ORDER BY serial";
+                ConsultaSql = "SELECT * FROM equipo e INNER JOIN tipo_equipo te ON e.id_tipo_equipo = te.código INNER JOIN ubicación u ON e.id_ubicación = u.código INNER JOIN marca m ON e.id_marca = m.código ORDER BY serial";
             } else {
-                ConsultaSql = "SELECT * FROM equipo WHERE (serial LIKE'" + Dato + "%' OR modelo LIKE'" + Dato + "%') ORDER BY serial";
+                ConsultaSql = "SELECT * FROM equipo e INNER JOIN tipo_equipo te ON e.id_tipo_equipo = te.código INNER JOIN ubicación u ON e.id_ubicación = u.código INNER JOIN marca m ON e.id_marca = m.código WHERE (serial LIKE'" + Dato + "%' OR modelo LIKE'" + Dato + "%') ORDER BY serial";
             }
         } else {
-            ConsultaSql = "SELECT * FROM `equipo` WHERE ('id_tipo equipo' = " + TipoEquipo + ") ORDER BY serial";
+            ConsultaSql = "SELECT * FROM equipo e INNER JOIN tipo_equipo te ON e.id_tipo_equipo = te.código INNER JOIN ubicación u ON e.id_ubicación = u.código INNER JOIN marca m ON e.id_marca = m.código WHERE ('id_tipo_equipo' = " + TipoEquipo + ") ORDER BY serial";
         }
         String DatoBD[] = new String[5];
         try {
@@ -170,9 +170,9 @@ public class SqlEquipo { //Inicio clase SqlEquipos
             ResultSet rs = st.executeQuery(ConsultaSql);
             while (rs.next()) {
                 DatoBD[0] = rs.getString("serial");
-                DatoBD[1] = rs.getString("id_tipo equipo");
-                DatoBD[2] = rs.getString("id_ubicación");
-                DatoBD[3] = rs.getString("id_marca");
+                DatoBD[1] = rs.getString("tipo de equipo");
+                DatoBD[2] = rs.getString("ubicación del equipo");
+                DatoBD[3] = rs.getString("marca");
                 DatoBD[4] = rs.getString("modelo");
                 ModeloTablaInventario.addRow(DatoBD);
             }
@@ -182,3 +182,4 @@ public class SqlEquipo { //Inicio clase SqlEquipos
     } //Fin método Listar Inventario Equipo
 
 } //Fin clase SqlEquipos
+
