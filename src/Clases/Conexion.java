@@ -14,7 +14,7 @@ import java.sql.*;
 public class Conexion { //Inicio clase Conexión
 
     //Inicio creación de variables globales
-    private final String base = "calipsoft";
+    private final String base = "bd";
     private final String user = "root";
     private final String password = "";
     private final String url = "jdbc:mysql://localhost:3306/" + base;

@@ -544,6 +544,7 @@ public class Principal extends javax.swing.JFrame { //Inicio clase Principal
                 } else {
                     Jl_Especificaciones.setText("Datos completos");
                     SqlUsuarios.ValidarUsuario(CodigoUsuarioPrincipal, ClaveUsuarioPrincipal, this, PosicionTipoUsuario);
+                    this.setVisible(false);
                 }
             }
         }

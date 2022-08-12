@@ -38,6 +38,7 @@ public class Menu extends javax.swing.JFrame { //Inicio clase Menú
     Icon IconoMantenimiento = new ImageIcon("src/Imagenes/IconoMantenimiento.png");
     Icon IconoReserva = new ImageIcon("src/Imagenes/IconoReserva.png");
     Icon IconoMenu = new ImageIcon("src/Imagenes/IconoMenu.png");
+    Icon ImagenConstruccion = new ImageIcon("src/Imagenes/Construccion.jpg");
     //Fin definición de variables globales
 
     public Menu() { //Inicio constructor clase Menú
@@ -158,7 +159,7 @@ public class Menu extends javax.swing.JFrame { //Inicio clase Menú
         Jb_Usuarios.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/IconoUsuarios.png"))); // NOI18N
         Jb_Usuarios.setText("Usuarios");
         Jb_Usuarios.setBorder(null);
-        Jb_Usuarios.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        Jb_Usuarios.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         Jb_Usuarios.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
             public void mouseMoved(java.awt.event.MouseEvent evt) {
                 Jb_UsuariosMouseMoved(evt);
@@ -182,7 +183,7 @@ public class Menu extends javax.swing.JFrame { //Inicio clase Menú
         Jb_Equipos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/IconoComputador.png"))); // NOI18N
         Jb_Equipos.setText("Equipos");
         Jb_Equipos.setBorder(null);
-        Jb_Equipos.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        Jb_Equipos.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         Jb_Equipos.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
             public void mouseMoved(java.awt.event.MouseEvent evt) {
                 Jb_EquiposMouseMoved(evt);
@@ -206,7 +207,7 @@ public class Menu extends javax.swing.JFrame { //Inicio clase Menú
         Jb_Mantenimiento.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/IconoMantenimiento.png"))); // NOI18N
         Jb_Mantenimiento.setText("Mantenimiento");
         Jb_Mantenimiento.setBorder(null);
-        Jb_Mantenimiento.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        Jb_Mantenimiento.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         Jb_Mantenimiento.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
             public void mouseMoved(java.awt.event.MouseEvent evt) {
                 Jb_MantenimientoMouseMoved(evt);
@@ -230,7 +231,7 @@ public class Menu extends javax.swing.JFrame { //Inicio clase Menú
         Jb_Reportes.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/IconoReportes.png"))); // NOI18N
         Jb_Reportes.setText("Reportes");
         Jb_Reportes.setBorder(null);
-        Jb_Reportes.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        Jb_Reportes.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         Jb_Reportes.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
             public void mouseMoved(java.awt.event.MouseEvent evt) {
                 Jb_ReportesMouseMoved(evt);
@@ -254,7 +255,7 @@ public class Menu extends javax.swing.JFrame { //Inicio clase Menú
         Jb_Reservas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/IconoReserva.png"))); // NOI18N
         Jb_Reservas.setText("Reserva");
         Jb_Reservas.setBorder(null);
-        Jb_Reservas.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        Jb_Reservas.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         Jb_Reservas.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
             public void mouseMoved(java.awt.event.MouseEvent evt) {
                 Jb_ReservasMouseMoved(evt);
@@ -278,7 +279,7 @@ public class Menu extends javax.swing.JFrame { //Inicio clase Menú
         Jb_Menu.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/IconoMenu.png"))); // NOI18N
         Jb_Menu.setText("Menú");
         Jb_Menu.setBorder(null);
-        Jb_Menu.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        Jb_Menu.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         Jb_Menu.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
             public void mouseMoved(java.awt.event.MouseEvent evt) {
                 Jb_MenuMouseMoved(evt);
@@ -304,7 +305,7 @@ public class Menu extends javax.swing.JFrame { //Inicio clase Menú
         Jb_Volver.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/IconoVolver.png"))); // NOI18N
         Jb_Volver.setToolTipText("Volver a la ventana anterior");
         Jb_Volver.setBorder(null);
-        Jb_Volver.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        Jb_Volver.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         Jb_Volver.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         Jb_Volver.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/IconoVolverPresionado.png"))); // NOI18N
         Jb_Volver.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/IconoVolverResaltado.png"))); // NOI18N
@@ -318,7 +319,7 @@ public class Menu extends javax.swing.JFrame { //Inicio clase Menú
         Jb_Minimizar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/IconoMinimizar.png"))); // NOI18N
         Jb_Minimizar.setToolTipText("Minimizar la aplicación");
         Jb_Minimizar.setBorder(null);
-        Jb_Minimizar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        Jb_Minimizar.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         Jb_Minimizar.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         Jb_Minimizar.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/IconoMinimizarPresionado.png"))); // NOI18N
         Jb_Minimizar.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/IconoMinimizarResaltado.png"))); // NOI18N
@@ -332,7 +333,7 @@ public class Menu extends javax.swing.JFrame { //Inicio clase Menú
         Jb_Cerrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/IconoCerrar.png"))); // NOI18N
         Jb_Cerrar.setToolTipText("Cierra la aplicación");
         Jb_Cerrar.setBorder(null);
-        Jb_Cerrar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        Jb_Cerrar.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         Jb_Cerrar.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         Jb_Cerrar.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/IconoCerrarPresionado.png"))); // NOI18N
         Jb_Cerrar.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/IconoCerrarResaltado.png"))); // NOI18N
@@ -435,7 +436,7 @@ public class Menu extends javax.swing.JFrame { //Inicio clase Menú
         Jb_AgregarReserva.setText("Agregar reserva");
         Jb_AgregarReserva.setToolTipText("Presione para ingresar un mantenimiento");
         Jb_AgregarReserva.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(248, 38, 33), 2, true));
-        Jb_AgregarReserva.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        Jb_AgregarReserva.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         Jb_AgregarReserva.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/IconoAgregarResaltado.png"))); // NOI18N
         Jb_AgregarReserva.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -450,7 +451,7 @@ public class Menu extends javax.swing.JFrame { //Inicio clase Menú
         Jb_EliminarReserva.setText("Eliminar reserva");
         Jb_EliminarReserva.setToolTipText("Seleccione en la tabla un mantenimiento y elimínelo presionando aquí");
         Jb_EliminarReserva.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(248, 38, 33), 2, true));
-        Jb_EliminarReserva.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        Jb_EliminarReserva.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         Jb_EliminarReserva.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/IconoBorrarPresionado.png"))); // NOI18N
         Jb_EliminarReserva.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/IconoBorrarResaltado.png"))); // NOI18N
         Jb_EliminarReserva.addActionListener(new java.awt.event.ActionListener() {
@@ -522,7 +523,7 @@ public class Menu extends javax.swing.JFrame { //Inicio clase Menú
                 return canEdit [columnIndex];
             }
         });
-        JTable_Reserva.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        JTable_Reserva.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         JTable_Reserva.setGridColor(new java.awt.Color(0, 93, 166));
         JTable_Reserva.setSelectionBackground(new java.awt.Color(0, 93, 166));
         JTable_Reserva.setSelectionForeground(new java.awt.Color(255, 255, 255));
@@ -574,7 +575,7 @@ public class Menu extends javax.swing.JFrame { //Inicio clase Menú
         Jb_AgregarMantenimiento.setText("Agregar mantenimiento");
         Jb_AgregarMantenimiento.setToolTipText("Presione para ingresar un mantenimiento");
         Jb_AgregarMantenimiento.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(248, 38, 33), 2, true));
-        Jb_AgregarMantenimiento.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        Jb_AgregarMantenimiento.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         Jb_AgregarMantenimiento.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/IconoAgregarResaltado.png"))); // NOI18N
         Jb_AgregarMantenimiento.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -589,7 +590,7 @@ public class Menu extends javax.swing.JFrame { //Inicio clase Menú
         Jb_EliminarMantenimiento.setText("Eliminar mantenimiento");
         Jb_EliminarMantenimiento.setToolTipText("Seleccione en la tabla un mantenimiento y elimínelo presionando aquí");
         Jb_EliminarMantenimiento.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(248, 38, 33), 2, true));
-        Jb_EliminarMantenimiento.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        Jb_EliminarMantenimiento.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         Jb_EliminarMantenimiento.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/IconoBorrarPresionado.png"))); // NOI18N
         Jb_EliminarMantenimiento.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/IconoBorrarResaltado.png"))); // NOI18N
         Jb_EliminarMantenimiento.addActionListener(new java.awt.event.ActionListener() {
@@ -661,7 +662,7 @@ public class Menu extends javax.swing.JFrame { //Inicio clase Menú
                 return canEdit [columnIndex];
             }
         });
-        JTable_Mantenimiento.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        JTable_Mantenimiento.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         JTable_Mantenimiento.setGridColor(new java.awt.Color(0, 93, 166));
         JTable_Mantenimiento.setSelectionBackground(new java.awt.Color(0, 93, 166));
         JTable_Mantenimiento.setSelectionForeground(new java.awt.Color(255, 255, 255));
@@ -713,7 +714,7 @@ public class Menu extends javax.swing.JFrame { //Inicio clase Menú
         Jb_EliminarReporte.setText("Eliminar reporte");
         Jb_EliminarReporte.setToolTipText("Seleccione en la tabla un reporte y elimínelo presionando aquí");
         Jb_EliminarReporte.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(248, 38, 33), 2, true));
-        Jb_EliminarReporte.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        Jb_EliminarReporte.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         Jb_EliminarReporte.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/IconoBorrarPresionado.png"))); // NOI18N
         Jb_EliminarReporte.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/IconoBorrarResaltado.png"))); // NOI18N
         Jb_EliminarReporte.addActionListener(new java.awt.event.ActionListener() {
@@ -729,7 +730,7 @@ public class Menu extends javax.swing.JFrame { //Inicio clase Menú
         Jb_AgregarReporte.setText("Agregar reporte");
         Jb_AgregarReporte.setToolTipText("Presione para ingresar un reporte");
         Jb_AgregarReporte.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(248, 38, 33), 2, true));
-        Jb_AgregarReporte.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        Jb_AgregarReporte.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         Jb_AgregarReporte.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/IconoAgregarResaltado.png"))); // NOI18N
         Jb_AgregarReporte.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -765,13 +766,13 @@ public class Menu extends javax.swing.JFrame { //Inicio clase Menú
         JTable_Reportes.setForeground(new java.awt.Color(51, 51, 51));
         JTable_Reportes.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+                {},
+                {},
+                {},
+                {}
             },
             new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
+
             }
         ));
         JTable_Reportes.setToolTipText("Tabla de reportes");
@@ -821,7 +822,7 @@ public class Menu extends javax.swing.JFrame { //Inicio clase Menú
         Jb_AgregarEquipo.setText("Agregar equipos");
         Jb_AgregarEquipo.setToolTipText("Presione para ingresar un equipo");
         Jb_AgregarEquipo.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(248, 38, 33), 2, true));
-        Jb_AgregarEquipo.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        Jb_AgregarEquipo.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         Jb_AgregarEquipo.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/IconoAgregarResaltado.png"))); // NOI18N
         Jb_AgregarEquipo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -836,7 +837,7 @@ public class Menu extends javax.swing.JFrame { //Inicio clase Menú
         Jb_EliminarEquipo.setText("Eliminar equipos");
         Jb_EliminarEquipo.setToolTipText("Seleccione en la tabla un equipo y elimínelo presionando aquí");
         Jb_EliminarEquipo.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(248, 38, 33), 2, true));
-        Jb_EliminarEquipo.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        Jb_EliminarEquipo.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         Jb_EliminarEquipo.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/IconoBorrarPresionado.png"))); // NOI18N
         Jb_EliminarEquipo.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/IconoBorrarResaltado.png"))); // NOI18N
         Jb_EliminarEquipo.addActionListener(new java.awt.event.ActionListener() {
@@ -885,7 +886,7 @@ public class Menu extends javax.swing.JFrame { //Inicio clase Menú
                 return canEdit [columnIndex];
             }
         });
-        JTable_Equipos.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        JTable_Equipos.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         JTable_Equipos.setGridColor(new java.awt.Color(0, 93, 166));
         JTable_Equipos.setSelectionBackground(new java.awt.Color(0, 93, 166));
         JTable_Equipos.setSelectionForeground(new java.awt.Color(255, 255, 255));
@@ -999,7 +1000,7 @@ public class Menu extends javax.swing.JFrame { //Inicio clase Menú
                 return canEdit [columnIndex];
             }
         });
-        JTable_Usuarios.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        JTable_Usuarios.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         JTable_Usuarios.setGridColor(new java.awt.Color(0, 93, 166));
         JTable_Usuarios.setSelectionBackground(new java.awt.Color(0, 93, 166));
         JTable_Usuarios.setSelectionForeground(new java.awt.Color(255, 255, 255));
@@ -1013,7 +1014,7 @@ public class Menu extends javax.swing.JFrame { //Inicio clase Menú
         Jb_EliminarUsuarios.setText("Eliminar usuarios");
         Jb_EliminarUsuarios.setToolTipText("Presione para eliminar usuarios");
         Jb_EliminarUsuarios.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(248, 38, 33), 2, true));
-        Jb_EliminarUsuarios.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        Jb_EliminarUsuarios.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         Jb_EliminarUsuarios.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/IconoBorrarPresionado.png"))); // NOI18N
         Jb_EliminarUsuarios.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/IconoBorrarResaltado.png"))); // NOI18N
         Jb_EliminarUsuarios.addActionListener(new java.awt.event.ActionListener() {
@@ -1029,7 +1030,7 @@ public class Menu extends javax.swing.JFrame { //Inicio clase Menú
         Jb_AgregarUsuarios.setText("Agregar usuarios");
         Jb_AgregarUsuarios.setToolTipText("Presione para agregar usuarios");
         Jb_AgregarUsuarios.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(248, 38, 33), 2, true));
-        Jb_AgregarUsuarios.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        Jb_AgregarUsuarios.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         Jb_AgregarUsuarios.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/IconoAgregarResaltado.png"))); // NOI18N
         Jb_AgregarUsuarios.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1089,7 +1090,7 @@ public class Menu extends javax.swing.JFrame { //Inicio clase Menú
                 .addContainerGap()
                 .addGroup(JPanel_UsuariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(Jl_BuscarUsuario)
-                    .addComponent(Jt_BuscarUsuario, javax.swing.GroupLayout.DEFAULT_SIZE, 35, Short.MAX_VALUE)
+                    .addComponent(Jt_BuscarUsuario, javax.swing.GroupLayout.DEFAULT_SIZE, 37, Short.MAX_VALUE)
                     .addGroup(JPanel_UsuariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(Jb_AgregarUsuarios, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(Jb_EliminarUsuarios, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -1490,13 +1491,13 @@ public class Menu extends javax.swing.JFrame { //Inicio clase Menú
 
     private void Jb_EliminarReporteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Jb_EliminarReporteActionPerformed
         //Inicio click sobre botón Eliminar Reporte
-
+        JOptionPane.showMessageDialog(null, "", "Módulo en construcción - CALIPSOFT", JOptionPane.PLAIN_MESSAGE, ImagenConstruccion);
         ///Fin click sobre botón Eliminar Reporte
     }//GEN-LAST:event_Jb_EliminarReporteActionPerformed
 
     private void Jb_AgregarReporteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Jb_AgregarReporteActionPerformed
         //Inicio click sobre botón Agregar Reporte
-
+        JOptionPane.showMessageDialog(null, "", "Módulo en construcción - CALIPSOFT", JOptionPane.PLAIN_MESSAGE, ImagenConstruccion);
         //Fin click sobre botón Agregar Reporte
     }//GEN-LAST:event_Jb_AgregarReporteActionPerformed
 
@@ -1510,19 +1511,19 @@ public class Menu extends javax.swing.JFrame { //Inicio clase Menú
 
     private void Jt_BuscarReporteKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_Jt_BuscarReporteKeyTyped
         //Inicio letra ingresada en campo Buscar Reporte
-
+        
         //Fin letra ingresada en campo Buscar Reporte
     }//GEN-LAST:event_Jt_BuscarReporteKeyTyped
 
     private void Jb_AgregarMantenimientoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Jb_AgregarMantenimientoActionPerformed
         //Inicio click sobre botón agregar Mantenimiento
-
+        JOptionPane.showMessageDialog(null, "", "Módulo en construcción - CALIPSOFT", JOptionPane.PLAIN_MESSAGE, ImagenConstruccion);
         //Fin click sobre botón agregar Mantenimiento
     }//GEN-LAST:event_Jb_AgregarMantenimientoActionPerformed
 
     private void Jb_EliminarMantenimientoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Jb_EliminarMantenimientoActionPerformed
         //Inicio click sobre botón Eliminar Mantenimiento
-
+        JOptionPane.showMessageDialog(null, "", "Módulo en construcción - CALIPSOFT", JOptionPane.PLAIN_MESSAGE, ImagenConstruccion);
         //Fin click sobre botón Eliminar Mantenimiento
     }//GEN-LAST:event_Jb_EliminarMantenimientoActionPerformed
 

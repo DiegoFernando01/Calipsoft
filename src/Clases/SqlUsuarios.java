@@ -73,12 +73,8 @@ public class SqlUsuarios { //Inicio clase SqlUsuarios
             ModeloTablaUsuarios.removeRow(0);
         }
         if (Dato.equals("")) {
-            ConsultaSql = "SELECT Codigo, Primer_Nombre, Segundo_Nombre, Primer_Apellido, Segundo_Apellido, sexo, Correo, Teléfono, perfil, Área, Contraseña, Cargo, estado "
-                    + "FROM usuarios INNER JOIN sexos USING (Id_Sexo) "
-                    + "INNER JOIN tipo_perfiles USING (Id_Tipo_Perfil) "
-                    + "INNER JOIN áreas USING (Id_Área) "
-                    + "INNER JOIN cargos USING (Id_Cargo) "
-                    + "INNER JOIN estados USING (Id_Estado) ORDER BY Codigo";
+            ConsultaSql = "SELECT Codigo, Primer_Nombre, Segundo_Nombre, Primer_Apellido, Segundo_Apellido, Id_Sexo, Correo, Teléfono, Id_Tipo_Perfil, Id_Área, Contraseña, Id_Cargo, Id_Estado "
+                    + "FROM usuarios ORDER BY Codigo";
         } else {
             ConsultaSql = "SELECT * FROM usuarios WHERE (Codigo LIKE'" + Dato + "%' OR Primer_Nombre LIKE'" + Dato + "%' OR Primer_Apellido LIKE'" + Dato + "%' OR Id_Cargo LIKE'" + Dato + "%') ORDER BY Codigo";
         }
@@ -92,14 +88,14 @@ public class SqlUsuarios { //Inicio clase SqlUsuarios
                 DatosBD[2] = ResultadosConsulta.getString("Segundo_Nombre");
                 DatosBD[3] = ResultadosConsulta.getString("Primer_Apellido");
                 DatosBD[4] = ResultadosConsulta.getString("Segundo_Apellido");
-                DatosBD[5] = ResultadosConsulta.getString("sexo");
+                DatosBD[5] = ResultadosConsulta.getString("Id_Sexo");
                 DatosBD[6] = ResultadosConsulta.getString("Correo");
                 DatosBD[7] = ResultadosConsulta.getString("Teléfono");
-                DatosBD[8] = ResultadosConsulta.getString("perfil");
-                DatosBD[9] = ResultadosConsulta.getString("Área");
+                DatosBD[8] = ResultadosConsulta.getString("Id_Tipo_Perfil");
+                DatosBD[9] = ResultadosConsulta.getString("Id_Área");
                 DatosBD[10] = ResultadosConsulta.getString("Contraseña");
-                DatosBD[11] = ResultadosConsulta.getString("Cargo");
-                DatosBD[12] = ResultadosConsulta.getString("estado");
+                DatosBD[11] = ResultadosConsulta.getString("Id_Cargo");
+                DatosBD[12] = ResultadosConsulta.getString("Id_Estado");
                 ModeloTablaUsuarios.addRow(DatosBD);
             }
         } catch (SQLException ErrorListarUsuarios) { //Capturador del error
