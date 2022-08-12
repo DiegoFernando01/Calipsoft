@@ -1553,13 +1553,13 @@ public class Menu extends javax.swing.JFrame { //Inicio clase Menú
 
     private void Jb_AgregarReservaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Jb_AgregarReservaActionPerformed
         //Inicio click en botón Agregar Reserva
-
+        JOptionPane.showMessageDialog(null, "", "Módulo en construcción - CALIPSOFT", JOptionPane.PLAIN_MESSAGE, ImagenConstruccion);
         //Fin click en botón Agregar Reserva
     }//GEN-LAST:event_Jb_AgregarReservaActionPerformed
 
     private void Jb_EliminarReservaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Jb_EliminarReservaActionPerformed
         //Inicio click en botón Eliminar Reserva
-
+        JOptionPane.showMessageDialog(null, "", "Módulo en construcción - CALIPSOFT", JOptionPane.PLAIN_MESSAGE, ImagenConstruccion);
         //Fin click en botón Eliminar Reserva
     }//GEN-LAST:event_Jb_EliminarReservaActionPerformed
 

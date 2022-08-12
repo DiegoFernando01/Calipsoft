@@ -24,9 +24,9 @@ public class InventarioEquipos extends javax.swing.JFrame { //Inicio ventana Inv
 
     //Inicio definición de variables globales
     int XMouse, YMouse;
-    static RegistroReserva ObjetoConReserva = new RegistroReserva();
     static Principal ObjetoConPrincipal = new Principal();
     static RegistroUsuarios ObjetoConRegistroUsuarios = new RegistroUsuarios();
+    static Menu ObjetoMenu = new Menu();
     Icon IconoAtencion = new ImageIcon(getClass().getResource("/Imagenes/IconoAtencion.png"));
     //Fin definición de variables globales
 
@@ -380,7 +380,7 @@ public class InventarioEquipos extends javax.swing.JFrame { //Inicio ventana Inv
     private void Jb_VolverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Jb_VolverActionPerformed
         //Inicio click sobre botón Volver
         Fade.JFrameFadeOut(1f, 0f, 0.1f, 50, this, Fade.DISPOSE);
-        ObjetoConReserva.setVisible(true);
+        ObjetoMenu.setVisible(true);
         //Fin click sobre botón Volver
     }//GEN-LAST:event_Jb_VolverActionPerformed
 
