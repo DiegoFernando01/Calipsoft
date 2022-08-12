@@ -19,6 +19,7 @@ import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 //Fin importación de clases necesarias
 
+//Ventana nueva
 public class InventarioEquipos extends javax.swing.JFrame { //Inicio ventana InventarioEquipo
 
     //Inicio definición de variables globales
